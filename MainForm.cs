@@ -108,7 +108,7 @@ namespace Text_Encryptor
                 return;
             }
             main.function = new BasicFunction((int)factor.Value, (int)fixTerm.Value);
-            function.Text = "f(x) = " + factor.Value.ToString() + "x" + " + " +fixTerm.Value.ToString();
+            function.Text = "f(x) = " + factor.Value.ToString() + "x" + " + " + fixTerm.Value.ToString();
         }
 
         void ClearClick()
