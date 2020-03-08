@@ -5,7 +5,7 @@ namespace Text_Encryptor
 {
     class Cryptor
     {
-        Language language;
+        public Language language;
 
         public Cryptor(Language turkish)
         {

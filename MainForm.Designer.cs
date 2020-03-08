@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.languageBox = new System.Windows.Forms.ComboBox();
             this.copyButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,6 +56,8 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.mainPanel.Controls.Add(this.label3);
+            this.mainPanel.Controls.Add(this.languageBox);
             this.mainPanel.Controls.Add(this.copyButton);
             this.mainPanel.Controls.Add(this.label2);
             this.mainPanel.Controls.Add(this.label1);
@@ -66,6 +70,29 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(597, 534);
             this.mainPanel.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Georgia", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(14, 447);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 31);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Dil";
+            // 
+            // languageBox
+            // 
+            this.languageBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.languageBox.FormattingEnabled = true;
+            this.languageBox.Items.AddRange(new object[] {
+            "Türkçe",
+            "İngilizce"});
+            this.languageBox.Location = new System.Drawing.Point(20, 493);
+            this.languageBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.languageBox.Name = "languageBox";
+            this.languageBox.Size = new System.Drawing.Size(150, 21);
+            this.languageBox.TabIndex = 8;
             // 
             // copyButton
             // 
@@ -207,6 +234,11 @@
             // fixTermInput
             // 
             this.fixTermInput.Location = new System.Drawing.Point(175, 178);
+            this.fixTermInput.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.fixTermInput.Name = "fixTermInput";
             this.fixTermInput.Size = new System.Drawing.Size(77, 20);
             this.fixTermInput.TabIndex = 3;
@@ -226,6 +258,11 @@
             // factorInput
             // 
             this.factorInput.Location = new System.Drawing.Point(175, 137);
+            this.factorInput.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.factorInput.Name = "factorInput";
             this.factorInput.Size = new System.Drawing.Size(77, 20);
             this.factorInput.TabIndex = 1;
@@ -279,6 +316,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button copyButton;
+        private System.Windows.Forms.ComboBox languageBox;
+        private System.Windows.Forms.Label label3;
     }
 }
 

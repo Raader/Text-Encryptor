@@ -18,13 +18,12 @@ namespace Text_Encryptor
         }
 
         public static string GetLetter(int order,Language language)
-        {
-            int index;
-            if(order < 0)
+        {            
+            int index = order % (language.letters.Length);
+            if (index < 0)
             {
-                order = (language.letters.Length - 1) - (-1 * (order + 1));
-            }
-            index = order % (language.letters.Length);
+                index = (language.letters.Length - 1) - (-1 * (index + 1));
+            }           
             return language.letters.Substring(index, 1);
         }
     }

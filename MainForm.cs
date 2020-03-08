@@ -21,8 +21,21 @@ namespace Text_Encryptor
             InitializeComponent();
             cryptor = new Cryptor(Language.Turkish);
             functionSelector = new FunctionSelector(this, factorInput, fixTermInput, funcLabel, applyButton, clearButton);
+            languageBox.SelectedItem = languageBox.Items[0];
+            languageBox.SelectedIndexChanged += (sender, e) => ChangeLanguage();
         }
 
+        void ChangeLanguage()
+        {
+            if(languageBox.SelectedItem.ToString() == "Türkçe")
+            {
+                cryptor.language = Language.Turkish;
+            }
+            else
+            {
+                cryptor.language = Language.English;
+            }
+        }
         private void enCryptButton_Click(object sender, EventArgs e)
         {
             if (function == null)
@@ -95,7 +108,7 @@ namespace Text_Encryptor
 
         void ClearClick()
         {
-            function.Text = "f(x) =";
+            function.Text = "f(x) = ax + b";
             factor.Value = 0;
             fixTerm.Value = 0;
         }
