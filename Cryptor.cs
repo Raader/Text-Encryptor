@@ -17,7 +17,7 @@ namespace Text_Encryptor
             string[] newStr = new string[str.Length];
             for(int x = 0; x < str.Length; x++)
             {
-                string letter = str.Substring(x, 1).ToLower();
+                string letter = str.Substring(x, 1).ToLower(language.culture);
                 if(!language.letters.Contains(letter))
                 {
                     newStr[x] = letter;
@@ -35,7 +35,7 @@ namespace Text_Encryptor
             string[] newStr = new string[str.Length];
             for (int x = 0; x < str.Length; x++)
             {
-                string letter = str.Substring(x, 1).ToLower();
+                string letter = str.Substring(x, 1).ToLower(language.culture);
                 if (!language.letters.Contains(letter))
                 {
                     newStr[x] = letter;

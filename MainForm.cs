@@ -72,6 +72,11 @@ namespace Text_Encryptor
             }
             Clipboard.SetText(outputLabel.Text);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            inputBox.Text = Clipboard.GetText();
+        }
     }
 
     class FunctionSelector

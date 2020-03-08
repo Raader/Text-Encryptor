@@ -47,6 +47,8 @@
             this.factorLabel = new System.Windows.Forms.Label();
             this.factorInput = new System.Windows.Forms.NumericUpDown();
             this.funcLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fixTermInput)).BeginInit();
@@ -56,6 +58,7 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.mainPanel.Controls.Add(this.button1);
             this.mainPanel.Controls.Add(this.label3);
             this.mainPanel.Controls.Add(this.languageBox);
             this.mainPanel.Controls.Add(this.copyButton);
@@ -184,6 +187,7 @@
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.sidePanel.Controls.Add(this.label4);
             this.sidePanel.Controls.Add(this.clearButton);
             this.sidePanel.Controls.Add(this.applyButton);
             this.sidePanel.Controls.Add(this.fixtermLabel);
@@ -278,6 +282,29 @@
             this.funcLabel.TabIndex = 0;
             this.funcLabel.Text = "f(x) = ax + b";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Georgia", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(20, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(160, 31);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Fonksiyon";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(427, 245);
+            this.button1.Margin = new System.Windows.Forms.Padding(20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 44);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Yapıştır";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,6 +318,7 @@
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.sidePanel.ResumeLayout(false);
+            this.sidePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fixTermInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.factorInput)).EndInit();
             this.ResumeLayout(false);
@@ -318,6 +346,8 @@
         private System.Windows.Forms.Button copyButton;
         private System.Windows.Forms.ComboBox languageBox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
     }
 }
 

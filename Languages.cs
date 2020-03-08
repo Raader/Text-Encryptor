@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Text_Encryptor
 {
@@ -14,7 +15,7 @@ namespace Text_Encryptor
             {
                 return 0;
             }
-            return language.letters.IndexOf(str.ToLower());
+            return language.letters.IndexOf(str.ToLower(language.culture));
         }
 
         public static string GetLetter(int order,Language language)
@@ -31,12 +32,14 @@ namespace Text_Encryptor
     class Language
     {
         public string letters { get; }
-        public static Language Turkish { get { return new Language("abcçdefgğhıijklmnoöprsştuüvyz"); } }
-        public static Language English { get { return new Language("abcdefghijklmnopqrstuvwxyz"); } }
+        public CultureInfo culture;
+        public static Language Turkish { get { return new Language("abcçdefgğhıijklmnoöprsştuüvyz",new CultureInfo("tr-TR")); } }
+        public static Language English { get { return new Language("abcdefghijklmnopqrstuvwxyz", new CultureInfo("en-US")); } }
         
-        public Language(string letters)
+        public Language(string letters,CultureInfo culture)
         {
             this.letters = letters;
+            this.culture = culture;
         }
     }
 
