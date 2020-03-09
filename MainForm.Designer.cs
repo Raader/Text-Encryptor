@@ -323,6 +323,8 @@
             this.ClientSize = new System.Drawing.Size(899, 558);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.mainPanel);
+            this.MaximumSize = new System.Drawing.Size(915, 597);
+            this.MinimumSize = new System.Drawing.Size(915, 597);
             this.Name = "MainForm";
             this.Text = "Şifreleyici";
             this.mainPanel.ResumeLayout(false);
